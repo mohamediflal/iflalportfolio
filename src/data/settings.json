@@ -1,0 +1,12 @@
+{
+  "visibility": {
+    "about": true,
+    "projects": true,
+    "experience": true,
+    "skills": true,
+    "education": true,
+    "certifications": false,
+    "achievements": false,
+    "testimonials": false
+  }
+}

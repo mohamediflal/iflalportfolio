@@ -1,0 +1,143 @@
+[
+  {
+    "id": 3,
+    "title": " MKB Smart - AI Grocery & Shopping App",
+    "description": "MKB Smart is a full-stack, AI-powered grocery shopping and e-commerce mobile platform built with React Native (Expo) and Node.js. \n\nKey Highlights:\n• Intelligent AI Assistant: Integrates Google Gemini & OpenAI to provide interactive grocery chat support, smart ingredient suggestions, and automated recipe generation based on cart and pantry items.\n• Hands-Free Voice Search: Implements speech recognition enabling users to discover and filter products using voice queries.\n• Secure Checkout & Payments: Full Stripe payment gateway integration with support for both online card transactions and Cash on Delivery (COD).\n• End-to-End Order Lifecycle: Real-time order tracking, address management with geo-coordinates, favorites list, and Firebase push notifications.\n• Comprehensive Admin Web Dashboard: Powered by React 19, Vite, and Tailwind CSS with analytics charts, PDF invoice/report generation, inventory controls, and role-based staff administration.\n• Modern Architecture: Engineered with Express 5, TypeScript, Prisma ORM, and Neon PostgreSQL serverless database.",
+    "image": "/images/1791201417276_Gemini_Generated_Image_knl18oknl18oknl1.jpg",
+    "technologies": [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Tailwind CSS",
+      "Stripe",
+      "Google Gemini AI",
+      "Firebase"
+    ],
+    "github": "",
+    "demo": "https://lnkd.in/p/gKDywjyd",
+    "hasGithub": false,
+    "hasDemo": true,
+    "githubMessage": "Source code is private under client confidentiality (NDA).",
+    "demoMessage": "",
+    "allowLinks": true,
+    "category": "Full-Stack",
+    "order": 1,
+    "features": [
+      "AI Recipe Generator & Chat Assistant",
+      "Voice Search & Recognition",
+      "Stripe Card Payment & COD",
+      "Real-Time Push Notifications",
+      "Admin Management Dashboard",
+      "Live Order Tracking"
+    ],
+    "duration": "2026"
+  },
+  {
+    "id": 2,
+    "title": "Gold & Silver Real-Time Rate Tracker",
+    "description": "Developed during my tenure at JobAlign Software Solutions, this cross-platform application was engineered to track real-time Gold (XAU) and Silver (XAG) commodity prices. It features a robust architecture combining a Flutter frontend with a Laravel and Firebase backend to ensure instantaneous market updates and secure data management.",
+    "image": "/images/1790959814370_Gemini_Generated_Image_ed9w03ed9w03ed9w.jpg",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Laravel",
+      "Firebase",
+      "fl_chart",
+      "Material Design 3",
+      "State Management"
+    ],
+    "github": "",
+    "demo": "",
+    "hasGithub": false,
+    "hasDemo": false,
+    "githubMessage": "Source code is private under client confidentiality (NDA).",
+    "demoMessage": "Live application is private / restricted internal deployment.",
+    "allowLinks": false,
+    "category": "Mobile App",
+    "order": 2,
+    "features": [
+      "Live Market Rates (XAU & XAG)",
+      "Real-Time Firebase Sync",
+      "Secure Admin Management Portal",
+      "Interactive Trend Visualizations",
+      "7-Day Performance Analysis",
+      "Laravel Backend API"
+    ],
+    "duration": "2025"
+  },
+  {
+    "id": 4,
+    "title": "HomlyPro - On-Demand Home Service Booking App ",
+    "description": "HomlyPro is a comprehensive on-demand home services booking mobile application developed with Flutter and Firebase. The app bridges the gap between homeowners and service professionals by providing a seamless, reliable platform for booking household services such as cleaning, plumbing, electrical work, painting, carpentry, gardening, cooking, and more.\n\nThe platform is architected with a robust multi-role workflow:\n• Customer Portal: Allows users to explore categorized services, select custom date & time slots, input address and contact details, book instantly, and track request statuses (pending, assigned, completed) with an in-app notification center.\n• Employee Dashboard: Enables service providers to manage their active availability status, view assigned tasks, update job progress, and track completed assignments.\n• Admin Command Center: Provides administrative control over customer bookings, employee dispatching/assignments, and high-level platform analytics (pending vs. assigned vs. completed jobs).\n\nPowered by Firebase Authentication, Cloud Firestore for real-time synchronization, and Firebase Cloud Messaging (FCM) for instant push alerts, HomlyPro delivers a secure, responsive, and animated user experience built with modern Material Design principles.",
+    "image": "/images/1791202378891_Gemini_Generated_Image_wjwymjwjwymjwjwy.jpg",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "Firebase Cloud Messaging (FCM)",
+      "Firebase Storage"
+    ],
+    "github": "https://github.com/mohamediflal/homlypro-app.git",
+    "demo": "https://lnkd.in/p/gKRzexsq",
+    "hasGithub": true,
+    "hasDemo": true,
+    "githubMessage": "",
+    "demoMessage": "",
+    "allowLinks": true,
+    "category": "Mobile App",
+    "order": 3,
+    "features": [
+      "Home services booking",
+      "Multi-role system (Customer / Employee / Admin)",
+      "Real-time booking dispatch & tracking",
+      "In-app notification center & FCM push alerts",
+      "Time slot scheduling",
+      "Interactive Admin analytics dashboard"
+    ],
+    "duration": "2025"
+  },
+  {
+    "id": 1,
+    "title": "AgriLink – Agricultural Marketplace",
+    "description": "AgriLink is a full-stack agricultural marketplace that connects customers with sellers of farming and agricultural products. Customers can browse products, view detailed information, add items to their cart or wishlist, place orders, submit reviews, and request customized products. Sellers can manage their stores, add and update products, monitor sales analytics, manage orders, view notifications, and track their wallet activity. The platform includes authentication, image uploads, product management, responsive dashboards, customer support features, and secure payment integration through Stripe.",
+    "image": "/images/1790937391053_Gemini_Generated_Image_eo8ka6eo8ka6eo8k.jpg",
+    "technologies": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Axios",
+      "Tailwind CSS",
+      "Chart.js",
+      "Stripe",
+      "REST API"
+    ],
+    "github": "https://github.com/Nazik2020/Agrilink-Agri-Marketplace.git",
+    "demo": "https://lnkd.in/p/ggtix6gB",
+    "category": "Web App",
+    "features": [
+      "Agricultural product marketplace",
+      "customer and seller authentication",
+      "product listings",
+      "shopping cart",
+      "wishlist",
+      "secure checkout",
+      "order management",
+      "product reviews and ratings",
+      "custom product requests",
+      "seller dashboard",
+      "sales analytics",
+      "wallet management",
+      "notifications",
+      "image uploads"
+    ],
+    "duration": "2025",
+    "order": 4
+  }
+]

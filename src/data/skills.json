@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "category": "Frontend",
+    "level": "96%",
+    "icon": "Code2"
+  },
+  {
+    "id": 2,
+    "name": "TypeScript",
+    "category": "Frontend",
+    "level": "94%",
+    "icon": "Code2"
+  },
+  {
+    "id": 3,
+    "name": "Next.js",
+    "category": "Frontend",
+    "level": "92%",
+    "icon": "Code2"
+  },
+  {
+    "id": 4,
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "level": "95%",
+    "icon": "Code2"
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "category": "Backend & Databases",
+    "level": "92%",
+    "icon": "Database"
+  },
+  {
+    "id": 6,
+    "name": "Laravel",
+    "category": "Backend & Databases",
+    "level": "85%",
+    "icon": "Database"
+  },
+  {
+    "id": 7,
+    "name": "PostgreSQL",
+    "category": "Backend & Databases",
+    "level": "88%",
+    "icon": "Database"
+  },
+  {
+    "id": 8,
+    "name": "MongoDB",
+    "category": "Backend & Databases",
+    "level": "80%",
+    "icon": "Database"
+  },
+  {
+    "id": 9,
+    "name": "Prisma",
+    "category": "Backend & Databases",
+    "level": "84%",
+    "icon": "Database"
+  },
+  {
+    "id": 10,
+    "name": "React Native",
+    "category": "Mobile & Design",
+    "level": "90%",
+    "icon": "Smartphone"
+  },
+  {
+    "id": 11,
+    "name": "Flutter",
+    "category": "Mobile & Design",
+    "level": "88%",
+    "icon": "Smartphone"
+  },
+  {
+    "id": 12,
+    "name": "Figma",
+    "category": "Mobile & Design",
+    "level": "85%",
+    "icon": "Palette"
+  },
+  {
+    "id": 13,
+    "name": "AWS",
+    "category": "Tools ",
+    "level": "78%",
+    "icon": "Wrench"
+  },
+  {
+    "id": 14,
+    "name": "Vercel",
+    "category": "Tools ",
+    "level": "86%",
+    "icon": "Wrench"
+  },
+  {
+    "id": 15,
+    "name": "Git / GitHub",
+    "category": "Tools ",
+    "level": "95%",
+    "icon": "Wrench"
+  },
+  {
+    "id": 16,
+    "name": "GitHub Actions",
+    "category": "Tools ",
+    "level": "80%",
+    "icon": "Wrench"
+  }
+]

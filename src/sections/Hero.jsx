@@ -1,36 +1,61 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/Button";
 import {
   ArrowRight,
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
+  Mail,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-
-const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
-  "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
-  "Git",
-  "GitHub Actions",
-];
+import { usePortfolio } from "@/context/PortfolioDataContext";
 
 export const Hero = () => {
+  const { data, visibility } = usePortfolio();
+  
+  // Group the flat skills data into the categories expected by the UI design
+  const skillCategories = [
+    {
+      title: "Frontend",
+      skills: data.skills.filter((s) => s.category === "Frontend")
+    },
+    {
+      title: "Backend & Databases",
+      skills: data.skills.filter((s) => s.category === "Backend & Databases")
+    },
+    {
+      title: "Mobile & Design",
+      skills: data.skills.filter((s) => s.category === "Mobile & Design")
+    },
+    {
+      title: "Tools ",
+      skills: data.skills.filter((s) => s.category === "Tools ")
+    }
+  ].filter(category => category.skills.length > 0); // Only render categories with skills
+
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimate(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const element = document.getElementById("contact");
+    if (element) {
+      const navbarOffset = 90; // Align with the sticky navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -47,14 +72,14 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
+              animation: `slow-drift ${15 + Math.random() * 20
+                }s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -69,46 +94,44 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Computer Science Undergraduate • Full Stack & Mobile Developer
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Crafting  <span className="text-primary glow-text">modern</span>
                 <br />
-                experiences with
+                scalable
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  web & mobile applications.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Nawas Mohamed Iflal — a Computer Science undergraduate and Full Stack & Mobile Developer from Sri Lanka. I build scalable web and mobile applications using React, React Native, Flutter, Node.js, Laravel, and PostgreSQL, with a passion for software engineering and AI-powered solutions.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
+              <Button size="lg" onClick={handleScrollToContact}>
+                Get In Touch <ArrowRight className="w-5 h-5" />
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
-                Download CV
+                View CV
               </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
+              <span className="text-sm text-muted-foreground">Connect with me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/mohamediflal" },
+                { icon: Linkedin, href: "https://linkedin.com/in/mohamediflal0811cs" },
+                { icon: Mail, href: "mailto:iflalmohammed0311@gmail.com" },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -133,7 +156,7 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/profile-photo.jpg"
-                  alt="Pedro Machado"
+                  alt="Nawas Mohamed Iflal"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
@@ -148,9 +171,9 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">4+</div>
                   <div className="text-xs text-muted-foreground">
-                    Years Exp.
+                    Projects.
                   </div>
                 </div>
               </div>
@@ -159,30 +182,78 @@ export const Hero = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-20 animate-fade-in animation-delay-600">
-          <p className="text-sm text-muted-foreground mb-6 text-center">
-            Technologies I work with
-          </p>
-          <div className="relative overflow-hidden">
-            <div
-              className="absolute left-0 top-0 bottom-0 w-32
-             bg-gradient-to-r from-background to-transparent z-10"
-            />
-            <div
-              className="absolute right-0 top-0 bottom-0 w-32
-             bg-gradient-to-l from-background to-transparent z-10"
-            />
-            <div className="flex animate-marquee">
-              {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                    {skill}
-                  </span>
-                </div>
-              ))}
+        {visibility.skills && (
+          <div id="skills" className="mt-32 animate-fade-in animation-delay-600">
+            <p className="text-sm font-medium text-primary tracking-wider uppercase text-center mb-4">
+              Tech Stack & Expertise
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-foreground tracking-tight">
+              Technologies I <span className="text-primary glow-text font-serif italic font-normal">Work With</span>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {skillCategories.map((category, catIdx) => {
+                // Custom gradient card glows depending on category index
+                const cardGlowColors = [
+                  "from-purple-500/10 via-transparent to-primary/5 hover:from-purple-500/20 hover:to-primary/10",
+                  "from-primary/10 via-transparent to-blue-500/5 hover:from-primary/20 hover:to-blue-500/10",
+                  "from-blue-500/10 via-transparent to-purple-500/5 hover:from-blue-500/20 hover:to-purple-500/10",
+                  "from-teal-500/10 via-transparent to-primary/5 hover:from-teal-500/20 hover:to-primary/10"
+                ];
+                const borderStyles = [
+                  "hover:border-purple-500/30 hover:shadow-purple-500/5",
+                  "hover:border-primary/30 hover:shadow-primary/5",
+                  "hover:border-blue-500/30 hover:shadow-blue-500/5",
+                  "hover:border-teal-500/30 hover:shadow-teal-500/5"
+                ];
+
+                return (
+                  <div
+                    key={catIdx}
+                    className={`glass-strong rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl border border-border/50 group ${borderStyles[catIdx]}`}
+                  >
+                    {/* Card ambient blur backdrop glow */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${cardGlowColors[catIdx]} transition-all duration-500 -z-10`} />
+
+                    {/* Card header */}
+                    <div className="flex justify-between items-baseline mb-8">
+                      <h3 className="text-xl md:text-2xl font-semibold text-white tracking-wide">
+                        {category.title}
+                      </h3>
+                      <span className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-widest font-bold">
+                        {category.skills.length} Tools
+                      </span>
+                    </div>
+
+                    {/* Skills lists inside cards */}
+                    <div className="space-y-6">
+                      {category.skills.map((skill, skillIdx) => (
+                        <div key={skillIdx} className="space-y-2 group/row">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm md:text-base font-medium text-foreground group-hover/row:text-primary transition-colors duration-200">
+                              {skill.name}
+                            </span>
+                            <span className="text-xs font-mono text-muted-foreground/80">
+                              {skill.level}
+                            </span>
+                          </div>
+                          {/* Progress Bar Track */}
+                          <div className="h-1.5 w-full bg-muted/40 rounded-full overflow-hidden relative">
+                            {/* Progress Bar Fill */}
+                            <div
+                              className="h-full rounded-full bg-gradient-to-r from-violet-600 via-indigo-500 to-primary transition-all duration-1000 ease-out shadow-[0_0_8px_rgba(32,178,166,0.3)]"
+                              style={{ width: animate ? skill.level : "0%" }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div
@@ -193,8 +264,7 @@ export const Hero = () => {
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
+
         </a>
       </div>
     </section>

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "company": "JobAlign Software Solutions",
+    "logo": "",
+    "role": "Mobile App Developer (Contract)",
+    "period": "November 2025 — Present",
+    "startDate": "2025-11",
+    "endDate": "Present",
+    "employmentType": "Contract",
+    "description": "Developing and maintaining cross-platform mobile applications using Flutter and Laravel. Collaborating with cross-functional teams to implement new features, integrate REST APIs and Firebase services, optimize application performance, and deliver high-quality mobile solutions in an Agile development environment.",
+    "responsibilities": [
+      "Developing and maintaining cross-platform mobile applications using Flutter and Laravel.",
+      "Collaborating with cross-functional teams to implement new features.",
+      "Integrating REST APIs and Firebase services."
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Laravel",
+      "Firebase",
+      "REST APIs",
+      "Git"
+    ],
+    "current": true
+  }
+]

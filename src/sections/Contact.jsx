@@ -8,25 +8,24 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/Button";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
+    value: "iflalmohammed0311@gmail.com",
+    href: "mailto:iflalmohammed0311@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+94 76 424 2885",
+    href: "tel:+94764242885",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Kalpitiya, Sri Lanka",
     href: "#",
   },
 ];
@@ -49,38 +48,42 @@ export const Contact = () => {
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
     try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      // Create a hidden form to submit directly to FormSubmit via a new tab.
+      // This bypasses browser CORS limits and handles activation/recaptcha screens automatically.
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = "https://formsubmit.co/iflalmohammed0311@gmail.com";
+      form.target = "_blank";
 
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error(
-          "EmailJS configuration is missing. Please check your environment variables."
-        );
+      const inputs = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `New Portfolio Message from ${formData.name}`
+      };
+
+      for (const [key, val] of Object.entries(inputs)) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = val;
+        form.appendChild(input);
       }
 
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        publicKey
-      );
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent successfully! I'll get back to you soon.",
+        message: "A verification tab has opened to securely process and deliver your message. Once completed, your email will be sent successfully!",
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("EmailJS error:", error);
+      console.error("Submission error:", err);
       setSubmitStatus({
         type: "error",
-        message:
-          error.text || "Failed to send message. Please try again later.",
+        message: "Failed to send message. Please try again.",
       });
     } finally {
       setIsLoading(false);
