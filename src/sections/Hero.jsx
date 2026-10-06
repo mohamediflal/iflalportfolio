@@ -120,7 +120,7 @@ export const Hero = () => {
                 Get In Touch <ArrowRight className="w-5 h-5" />
               </Button>
               <AnimatedBorderButton
-                href="/cv.pdf"
+                href="/mohamed_iflal_cv.pdf"
                 download="Mohamed_Iflal_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
