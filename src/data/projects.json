@@ -42,7 +42,7 @@
     "description": "Contributed to the development of  Adam Foundation (Family Ledger)  at  JobAlign Software Solutions, a cross-platform mobile application integrated with JBooks Cloud for microfinance and community ledger management. Worked on member profile management, loan issuance and repayment workflows, financial transaction history, and dashboard data displaying balances and financial statistics in Sri Lankan Rupees (LKR). Integrated backend REST APIs using Dio, implemented secure Bearer token authentication and session persistence, and developed on-device PDF generation and export functionality for financial statements. Focused on reliable API communication, error handling, and delivering a smooth user experience for day-to-day financial operations.",
     "image": "/images/1793031886688_Gemini_Generated_Image_j2aa97j2aa97j2aa.jpg",
     "technologies": [
-      "lutter",
+      "Flutter",
       "Dart",
       "REST API",
       "Dio",
