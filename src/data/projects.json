@@ -37,6 +37,47 @@
     "duration": "2026"
   },
   {
+    "id": 5,
+    "title": "Adam Foundation – Financial & Loan Management App",
+    "description": "Contributed to the development of  Adam Foundation (Family Ledger)  at  JobAlign Software Solutions, a cross-platform mobile application integrated with JBooks Cloud for microfinance and community ledger management. Worked on member profile management, loan issuance and repayment workflows, financial transaction history, and dashboard data displaying balances and financial statistics in Sri Lankan Rupees (LKR). Integrated backend REST APIs using Dio, implemented secure Bearer token authentication and session persistence, and developed on-device PDF generation and export functionality for financial statements. Focused on reliable API communication, error handling, and delivering a smooth user experience for day-to-day financial operations.",
+    "image": "/images/1793031886688_Gemini_Generated_Image_j2aa97j2aa97j2aa.jpg",
+    "technologies": [
+      "lutter",
+      "Dart",
+      "REST API",
+      "Dio",
+      "SharedPreferences",
+      "PDF Generation",
+      "Material 3"
+    ],
+    "github": "",
+    "demo": "https://lnkd.in/p/gNq-nS4F",
+    "hasGithub": false,
+    "hasDemo": true,
+    "githubMessage": "Source code is private under client confidentiality (NDA).",
+    "demoMessage": "",
+    "allowLinks": true,
+    "category": "Mobile App",
+    "order": 2,
+    "features": [
+      "Member Management",
+      "Digital Member Onboarding",
+      "Customer Identification",
+      "Loan Issuance",
+      "Loan Repayment Tracking",
+      "Financial Balance Management",
+      "Transaction History",
+      "Date-Based Filtering",
+      "PDF Statement Generation",
+      "Receipt Generation and Printing",
+      "REST API Integration",
+      "Bearer Token Authentication",
+      "Session Management",
+      "Error Handling"
+    ],
+    "duration": "2026"
+  },
+  {
     "id": 2,
     "title": "Gold & Silver Real-Time Rate Tracker",
     "description": "Developed during my tenure at JobAlign Software Solutions, this cross-platform application was engineered to track real-time Gold (XAU) and Silver (XAG) commodity prices. It features a robust architecture combining a Flutter frontend with a Laravel and Firebase backend to ensure instantaneous market updates and secure data management.",
@@ -58,7 +99,7 @@
     "demoMessage": "Live application is private / restricted internal deployment.",
     "allowLinks": false,
     "category": "Mobile App",
-    "order": 2,
+    "order": 3,
     "features": [
       "Live Market Rates (XAU & XAG)",
       "Real-Time Firebase Sync",
@@ -90,7 +131,7 @@
     "demoMessage": "",
     "allowLinks": true,
     "category": "Mobile App",
-    "order": 3,
+    "order": 4,
     "features": [
       "Home services booking",
       "Multi-role system (Customer / Employee / Admin)",
@@ -138,6 +179,6 @@
       "image uploads"
     ],
     "duration": "2025",
-    "order": 4
+    "order": 5
   }
 ]
