@@ -3,18 +3,18 @@
     "id": 1,
     "company": "JobAlign Software Solutions",
     "logo": "",
-    "role": "Mobile App Developer ",
+    "role": "Full Stack Developer (Mobile & Web)",
     "period": "November 2025 — Present",
     "startDate": "2025-11",
     "endDate": "Present",
     "employmentType": "Contract",
-    "description": "Developing and maintaining cross-platform mobile applications using Flutter and Laravel. Collaborating with cross-functional teams to implement new features, integrate REST APIs and Firebase services, optimize application performance, and deliver high-quality mobile solutions in an Agile development environment.",
+    "description": "Started with cross-platform mobile application development using React Native and Flutter, with responsibilities now covering both mobile and web application development using React and Laravel. Developing responsive user interfaces, backend logic, server-side functionality, REST APIs, and database integrations. Working with Firebase services, optimizing application performance, and collaborating with cross-functional teams in an Agile environment to deliver scalable and reliable software solutions.",
     "responsibilities": [
-      "Developing and maintaining cross-platform mobile applications using Flutter and Laravel.",
-      "Collaborating with cross-functional teams to implement new features.",
-      "Integrating REST APIs and Firebase services."
+      "Developing and maintaining cross-platform mobile applications and web applications using React Native, Flutter, React, and Laravel. Responsible for building responsive user interfaces, implementing backend services, integrating REST APIs and Firebase services, managing database operations, and optimizing application performance. Collaborating with cross-functional teams in an Agile environment to deliver scalable, reliable, and user-focused software solutions."
     ],
     "technologies": [
+      "React Native",
+      "React",
       "Flutter",
       "Dart",
       "Laravel",
