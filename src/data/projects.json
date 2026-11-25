@@ -37,6 +37,43 @@
     "duration": "2026"
   },
   {
+    "id": 6,
+    "title": "Jbooks 360 — Accounting, Tax Advisory & ERP Platform",
+    "description": "Jbooks 360 is a responsive multi-page corporate web application built for AMR Associates, a Sri Lankan accounting, bookkeeping, tax advisory, and accounting software practice. Designed with a modular React 19 and Vite architecture, the platform spans five core views—Home, Services, Software Services (showcasing JBooks.cloud ERP and JBooks360.lk Desktop), News & Insights, and About Us.\n\nKey engineering highlights include a centralized ConsultationContext that intercepts consultation CTAs across all pages to open a pre-filled booking modal, React Portal-mounted dialogs (ConsultForm and ContactUs) with Escape-key dismissal and scroll locking to prevent stacking-context clipping, and a searchable, category-filtered news portal with an inline article reader. The UI incorporates HCI-focused micro-interactions, GPU-accelerated transitions, prefers-reduced-motion accessibility support, a scroll-aware sticky navigation bar, and a custom Node.js Cloudflare Quick Tunnel CLI (npm run share) for instant HTTPS client previews.",
+    "image": "/images/1795598174192_AMR_Associates___JBooks_Showcase.png",
+    "technologies": [
+      "React 19",
+      "Vite",
+      "React Router",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "Cloudflare Tunnel",
+      "ESLint"
+    ],
+    "github": "",
+    "demo": "https://jbooks360.cloud/",
+    "hasGithub": false,
+    "hasDemo": true,
+    "githubMessage": "Source code is private under client confidentiality (NDA).",
+    "demoMessage": "",
+    "allowLinks": true,
+    "category": "Web App",
+    "order": 2,
+    "features": [
+      "Multi-page SPA routing",
+      "Global consultation booking workflow",
+      "Portal-mounted accessible modals",
+      "Searchable & filterable news portal",
+      "Scroll-direction-aware floating navbar",
+      "Direct WhatsApp & clipboard contact modal",
+      "Animated counters & micro-interactions",
+      "Mobile-first responsive UI",
+      "Automated Cloudflare Tunnel demo CLI"
+    ],
+    "duration": "2026"
+  },
+  {
     "id": 5,
     "title": "Adam Foundation – Financial & Loan Management App",
     "description": "Contributed to the development of  Adam Foundation (Family Ledger)  at  JobAlign Software Solutions, a cross-platform mobile application integrated with JBooks Cloud for microfinance and community ledger management. Worked on member profile management, loan issuance and repayment workflows, financial transaction history, and dashboard data displaying balances and financial statistics in Sri Lankan Rupees (LKR). Integrated backend REST APIs using Dio, implemented secure Bearer token authentication and session persistence, and developed on-device PDF generation and export functionality for financial statements. Focused on reliable API communication, error handling, and delivering a smooth user experience for day-to-day financial operations.",
@@ -58,7 +95,7 @@
     "demoMessage": "",
     "allowLinks": true,
     "category": "Mobile App",
-    "order": 2,
+    "order": 3,
     "features": [
       "Member Management",
       "Digital Member Onboarding",
@@ -99,7 +136,7 @@
     "demoMessage": "Live application is private / restricted internal deployment.",
     "allowLinks": false,
     "category": "Mobile App",
-    "order": 3,
+    "order": 4,
     "features": [
       "Live Market Rates (XAU & XAG)",
       "Real-Time Firebase Sync",
@@ -131,7 +168,7 @@
     "demoMessage": "",
     "allowLinks": true,
     "category": "Mobile App",
-    "order": 4,
+    "order": 5,
     "features": [
       "Home services booking",
       "Multi-role system (Customer / Employee / Admin)",
@@ -179,6 +216,6 @@
       "image uploads"
     ],
     "duration": "2025",
-    "order": 5
+    "order": 6
   }
 ]
